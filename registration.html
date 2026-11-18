@@ -1,140 +1,45 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Delegate registration information for the National Scientific Convention on Homoeopathy 2026 in Bhubaneswar, Odisha.">
-  <title>Delegate Registration | homoeoworld</title>
-  <style>
-    :root { --green:#17654f; --deep:#123c31; --mint:#e7f0e7; --cream:#fbfaf5; --ink:#20372e; --muted:#66766d; --line:#dce6dc; --gold:#c49a55; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--cream); color:var(--ink); font:15px/1.65 Arial, sans-serif; }
-    a { color:inherit; text-decoration:none; }
-    .top { background:var(--deep); color:#fff; padding:9px 5vw; font-size:12px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-    header { padding:16px 5vw; background:#fffdf8; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:16px; }
-    .brand { display:flex; align-items:center; gap:10px; color:var(--green); font-size:21px; font-weight:850; }
-    .logo { display:grid; place-items:center; width:40px; height:40px; border-radius:50%; background:var(--mint); }
-    .btn { display:inline-flex; justify-content:center; align-items:center; border:0; background:var(--green); color:#fff; border-radius:999px; padding:12px 21px; font-size:13px; font-weight:bold; cursor:pointer; }
-    .btn:hover { background:#0d4d3b; }
-    .btn.secondary { background:#fff; border:1px solid var(--line); color:var(--green); }
-    main { max-width:1140px; margin:auto; padding:42px 5vw 76px; }
-    .hero { border-radius:22px; padding:clamp(26px,5vw,56px); background:linear-gradient(120deg,#123c31,#1d6a51); color:white; position:relative; overflow:hidden; }
-    .hero:after { content:""; position:absolute; width:300px; height:300px; border:1px solid #ffffff25; border-radius:50%; right:-95px; top:-110px; box-shadow:0 0 0 32px #ffffff08,0 0 0 65px #ffffff05; pointer-events:none; }
-    .eyebrow { color:#4c866b; font-size:11px; letter-spacing:2px; text-transform:uppercase; font-weight:850; }
-    .hero .eyebrow { color:#d2e5d6; }
-    h1,h2,h3 { font-family:Georgia,serif; line-height:1.2; }
-    h1 { max-width:820px; font-size:clamp(32px,4.8vw,52px); margin:12px 0 15px; }
-    h2 { color:var(--deep); font-size:clamp(26px,3vw,34px); margin:8px 0 12px; }
-    h3 { color:var(--deep); font-size:21px; margin:8px 0; }
-    .hero p { color:#e1eee5; max-width:760px; margin:0; }
-    .event-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
-    .pill { display:inline-flex; gap:7px; align-items:center; border:1px solid #ffffff45; border-radius:999px; padding:7px 12px; font-size:12px; color:white; }
-    .notice { margin:22px 0; border:1px solid #e7d6ad; background:#fff8e8; color:#70562a; border-radius:12px; padding:13px 16px; font-size:13px; }
-    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:26px 0 44px; }
-    .step,.panel { background:#fff; border:1px solid var(--line); border-radius:16px; padding:20px; }
-    .num { width:32px; height:32px; border-radius:50%; display:grid; place-items:center; background:var(--mint); color:var(--green); font-weight:bold; }
-    .step p,.muted { color:var(--muted); font-size:13px; margin:4px 0 0; }
-    .layout { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(260px,.8fr); gap:24px; align-items:start; }
-    .panel { padding:clamp(20px,3vw,30px); margin-bottom:20px; }
-    .formgrid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:22px; }
-    .field { display:grid; gap:6px; align-content:start; }
-    .field.full { grid-column:1/-1; }
-    label { font-size:13px; font-weight:bold; }
-    .req { color:#b54432; }
-    input,select,textarea { width:100%; padding:12px 13px; border:1px solid #cbd9ce; border-radius:9px; background:#fff; color:var(--ink); font:inherit; }
-    input:focus,select:focus,textarea:focus { outline:2px solid #9dc9ad; outline-offset:1px; }
-    input[type=file] { padding:10px; font-size:12px; }
-    .hint { color:var(--muted); font-size:11px; }
-    .checkline { display:flex; align-items:flex-start; gap:10px; font-size:12px; color:var(--muted); }
-    .checkline input { width:auto; margin-top:5px; }
-    .actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
-    .result { font-size:13px; font-weight:bold; margin-top:14px; }
-    .result.warn { color:#8a5d15; }
-    .result.ok { color:var(--green); }
-    .sidecard { background:#edf4eb; border-radius:16px; padding:22px; margin-bottom:16px; }
-    .sidecard ul { padding-left:19px; color:#52675b; font-size:13px; }
-    .fee { border-top:1px solid #d5e3d6; padding-top:13px; margin-top:13px; display:flex; justify-content:space-between; gap:10px; font-size:13px; }
-    .pending { font-size:12px; color:#7d642e; background:#fff4d9; padding:10px 12px; border-radius:9px; margin-top:12px; }
-    .section { margin-top:45px; }
-    details { background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:10px 0; }
-    summary { cursor:pointer; font-weight:bold; color:var(--deep); }
-    details p { font-size:13px; color:var(--muted); margin-bottom:0; }
-    footer { background:#102e25; color:#d8e6dd; padding:30px 5vw; font-size:12px; }
-    footer .inner { max-width:1140px; margin:auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; }
-    @media(max-width:820px) { .layout { grid-template-columns:1fr; } .steps { grid-template-columns:1fr; } }
-    @media(max-width:560px) { .formgrid { grid-template-columns:1fr; } .field.full { grid-column:auto; } .top { font-size:11px; } header { padding:13px 5vw; } }
-  </style>
-</head>
-<body>
-  <div class="top"><span>National Scientific Convention on Homoeopathy 2026</span><span>Bhubaneswar, Odisha · 25–28 November 2026</span></div>
-  <header>
-    <a class="brand" href="index.html"><span class="logo">✳</span><span>homoeoworld</span></a>
-    <a class="btn secondary" href="index.html">← Back to homepage</a>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="eyebrow">Delegate registration portal</div>
-      <h1>National Scientific Convention on Homoeopathy 2026</h1>
-      <p>Complete your delegate registration using the official Google Form. Registration closes on 23 November 2026 at 11:59 PM (IST). No registration will be accepted after this deadline. No spot registration. The convention will be held on 25–28 November 2026. Students pay ₹1,000; doctors pay ₹2,000; HMO and alumni pay ₹2,000 each.</p>
-      <div class="event-meta"><span class="pill">⌖ Dr. Abhin Chandra Homoeopathic Medical College & Hospital</span><span class="pill">Bhubaneswar, Odisha</span><span class="pill">Date: 25–28 November 2026</span><span class="pill">STUDENTS ₹1,000 · DOCTORS ₹2,000</span></div>
-    </section>
-    <div class="notice"><strong>Registration closes: 23 November 2026 at 11:59 PM (IST). No registration will be accepted after the deadline. NO SPOT REGISTRATION.</strong><br><strong>Registration Fee:</strong> Students: ₹1,000. Doctors: ₹2,000. HMO and Alumni: ₹2,000 each. Convention date: 25–28 November 2026. Official QR code and UPI ID will be added when provided.</div>
-    <div class="steps">
-      <article class="step"><div class="num">1</div><h3>Choose your category</h3><p>Select the delegate category that best describes you.</p></article>
-      <article class="step"><div class="num">2</div><h3>Complete the form</h3><p>Enter your contact and institution details in the official Google Form.</p></article>
-      <article class="step"><div class="num">3</div><h3>Submit your details</h3><p>Submit the completed Google Form and follow the official payment instructions once they are published.</p></article>
-    </div>
-    <div class="layout">
-      <section class="panel" id="delegate-registration">
-        <div class="eyebrow">Join the convention</div>
-        <h2>Delegate Registration</h2>
-        <p class="muted">Keep abreast of the latest developments in Homoeopathy, hear from experts, present your research on a global stage and experience new developments in the sector. Don't miss out!</p>
-        <p class="muted">Use the official registration form below to submit your delegate details. Students pay ₹1,000; doctors pay ₹2,000; HMO and alumni pay ₹2,000 each. Official payment details will be added soon.</p>
-        <div class="actions"><a class="btn" id="registrationFormLink" href="https://docs.google.com/forms/d/e/1FAIpQLSe9hvtW5bTdjjIQ9_EOPNLUEF-9TU_Ajj7xuWOgJjNu7zNYoA/viewform" target="_blank" rel="noopener noreferrer">Open Google Registration Form ↗</a><a class="btn secondary" href="index.html">Back to homepage</a></div>
-        <p class="hint">Students pay ₹1,000. Doctors pay ₹2,000. HMO and alumni pay ₹2,000 each. Official QR code and UPI ID will be added soon.</p>
-      </section>
-      <aside>
-        <div class="sidecard">
-          <div class="eyebrow">At a glance</div><h3>Event information</h3>
-          <p class="muted">National Scientific Convention on Homoeopathy 2026</p>
-          <div class="fee"><span>Venue</span><strong>Dr. Abhin Chandra Homoeopathic Medical College & Hospital</strong></div>
-          <div class="fee"><span>City</span><strong>Bhubaneswar, Odisha</strong></div>
-          <div class="fee"><span>Convention date</span><strong>25–28 November 2026</strong></div>
-          <div class="fee"><span>Students</span><strong>₹1,000</strong></div><div class="fee"><span>Doctors</span><strong>₹2,000</strong></div><div class="fee"><span>HMO / Alumni</span><strong>₹2,000 each</strong></div>
-          <div class="pending">Students pay ₹1,000. Doctors pay ₹2,000. HMO and alumni pay ₹2,000 each. Official QR code and UPI ID will be published here once provided.</div>
-        </div>
-        <div class="panel">
-          <div class="eyebrow">Before you register</div><h3>Keep ready</h3>
-          <ul class="muted"><li>Your preferred delegate category</li><li>Institution / organisation details</li><li>Valid email and mobile number</li><li>Official payment details (when published) and payment confirmation, if applicable</li></ul>
-          <p class="muted"><strong>Official contact:</strong> To be confirmed.</p>
-        </div>
-      </aside>
-    </div>
-    <section class="section" aria-labelledby="faq-title">
-      <div class="eyebrow">Help & information</div><h2 id="faq-title">Frequently asked questions</h2>
-      <details><summary>When is the convention?</summary><p>The National Scientific Convention on Homoeopathy 2026 will be held on 25–28 November 2026.</p></details>
-      <details><summary>What is the registration fee?</summary><p>The registration fee is ₹1,000 for students, ₹2,000 for doctors, and ₹2,000 for HMO and alumni. Official QR code and UPI ID will be added once provided.</p></details>
-      <details><summary>Do I need to make a payment?</summary><p>Students pay ₹1,000, doctors pay ₹2,000, and HMO and alumni pay ₹2,000 each. Please wait for the official QR code and UPI ID before making any payment.</p></details>
-      <details><summary>Will I receive a confirmation?</summary><p>Email/SMS confirmation and a registration reference number require a working backend and verified organiser email/SMS provider.</p></details>
-    </section>
-  </main>
-  <footer><div class="inner"><div><strong>homoeoworld</strong><p>National Scientific Convention on Homoeopathy 2026 · Bhubaneswar, Odisha</p></div><div><strong>Official registration contact</strong><p>To be confirmed</p></div><div>© 2026 homoeoworld · Registration preview</div></div></footer>
-
-
-<script>
-(function(){
- const deadline=new Date('2026-11-23T23:59:00+05:30').getTime();
- const link=document.getElementById('registrationFormLink');
- function checkClose(){
-   if(Date.now()>=deadline && link){
-     link.removeAttribute('href');link.removeAttribute('target');
-     link.setAttribute('aria-disabled','true');link.style.pointerEvents='none';
-     link.style.opacity='.55';link.textContent='Registration Closed';
-   }
- }
- checkClose();setInterval(checkClose,1000);
-})();
-</script>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Offline delegate registration information for the National Scientific Convention on Homoeopathy 2026.">
+<title>Offline Delegate Registration | homoeoworld</title>
+<style>
+:root{--green:#17654f;--deep:#123c31;--mint:#e7f0e7;--cream:#fbfaf5;--ink:#20372e;--muted:#66766d;--line:#dce6dc;--gold:#c49a55}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.65 Arial,sans-serif}a{color:inherit;text-decoration:none}
+.top{background:var(--deep);color:#fff;padding:9px 5vw;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{padding:16px 5vw;background:#fffdf8;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--green);font-size:21px;font-weight:850}.logo{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--mint)}
+.btn{display:inline-flex;justify-content:center;align-items:center;background:var(--green);color:#fff;border-radius:999px;padding:11px 18px;font-size:13px;font-weight:bold}.btn.secondary{background:#fff;border:1px solid var(--line);color:var(--green)}
+main{max-width:1100px;margin:auto;padding:38px 5vw 70px}.hero{border-radius:22px;padding:clamp(25px,5vw,52px);background:linear-gradient(120deg,#123c31,#1d6a51);color:#fff;position:relative;overflow:hidden}.eyebrow{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:850;color:#4c866b}.hero .eyebrow{color:#bce6c8}.hero h1{font: bold clamp(30px,4.8vw,48px)/1.15 Georgia,serif;margin:12px 0}.hero p{color:#e1eee5;max-width:800px;margin:0}.meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.pill{border:1px solid #ffffff45;border-radius:999px;padding:7px 12px;font-size:12px}
+.notice{margin:20px 0;border:1px solid #e7d6ad;background:#fff8e8;color:#70562a;border-radius:12px;padding:14px 16px;font-size:13px}
+.fees{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}.fee-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;min-height:150px}.fee-card.student{border-left:4px solid #4bbd83}.fee-card.doctor{border-left:4px solid var(--gold)}.fee-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.fee-head h2{font: bold 21px Georgia,serif;margin:0;color:var(--deep)}.price{font-weight:850;color:var(--green);font-size:18px}.fee-card p{color:var(--muted);font-size:13px;margin:12px 0 0}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(20px,3vw,28px);margin:20px 0}.panel h2{font: bold clamp(23px,3vw,30px) Georgia,serif;color:var(--deep);margin:5px 0 15px}.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.doc{background:#f7faf6;border:1px solid var(--line);border-radius:12px;padding:17px}.doc h3{font:bold 16px Georgia,serif;margin:0 0 6px;color:var(--deep)}.doc p{font-size:13px;color:var(--muted);margin:0}
+.coordinators{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.coord{border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:15px;background:#fff;padding:20px}.coord h3{font: bold 19px Georgia,serif;margin:0 0 4px;color:var(--deep)}.role{font-size:10px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}.phone{margin:14px 0;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:#fbfcfa;font-weight:bold;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.coord-actions{display:flex;gap:8px;flex-wrap:wrap}.coord-actions .btn{flex:1;min-width:110px}.wa{background:#e8f5ed;color:#17654f;border:1px solid #cce5d4}
+.instructions{background:#f1f6ee;border:1px solid #d7e4d4;border-radius:13px;padding:18px 20px;margin-top:20px;font-size:13px}.instructions ul{margin:8px 0 0;padding-left:20px}.contact{color:var(--muted);font-size:13px}footer{background:#102e25;color:#d8e6dd;padding:26px 5vw;font-size:12px}footer .inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:700px){.fees,.docs,.coordinators{grid-template-columns:1fr}.top{font-size:11px}header{padding:13px 5vw}.fee-card{min-height:auto}}
+</style></head><body>
+<div class="top"><span>National Scientific Convention on Homoeopathy 2026</span><span>Bhubaneswar, Odisha · 25–27 November 2026</span></div>
+<header><a class="brand" href="index.html"><span class="logo">✳</span><span>homoeoworld</span></a><a class="btn secondary" href="index.html">← Back to homepage</a></header>
+<main>
+<section class="hero"><div class="eyebrow">✦ Official Offline Registration Desk · Convention 2026</div><h1>Offline Delegate Registration</h1><p>Delegate registration for the National Scientific Convention on Homoeopathy 2026 is conducted strictly offline through direct contact with our official registration coordinators. There is no online submission form.</p><div class="meta"><span class="pill">Dr. Abhin Chandra Homoeopathic Medical College & Hospital</span><span class="pill">Bhubaneswar, Odisha</span><span class="pill">25–27 November 2026</span></div></section>
+<div class="notice"><strong>Registration closes on 23 November 2026 at 11:59 PM (IST).</strong> No registration will be accepted after the deadline. <strong>No spot registration.</strong> Registration may close earlier if all available seats are filled.</div>
+<div class="fees"><article class="fee-card student"><div class="fee-head"><h2>🎓 Students (Any College)</h2><span class="price">₹1,000</span></div><p>Delegation fee of ₹1,000 for students of any Homoeopathic, Ayurvedic, or Medical college attending the scientific convention.</p></article>
+<article class="fee-card doctor"><div class="fee-head"><h2>🩺 Doctors (Any College)</h2><span class="price">₹2,000</span></div><p>Delegation fee of ₹2,000 for Clinicians, Doctors, Homoeopathic Medical Officers (HMOs), MD Scholars, Faculties, Professors, Researchers, Scientists, and Alumni of any college.</p></article></div>
+<section class="panel"><div class="eyebrow">📋 Registration Checklist</div><h2>Keep the Following Documents Ready for Smooth Registration</h2><div class="docs">
+<article class="doc"><h3>🪪 1. Aadhaar Card</h3><p>Government UID for identity verification.</p></article>
+<article class="doc"><h3>🏛️ 2. Any Government ID</h3><p>Voter ID, Passport, PAN Card, or Driving License.</p></article>
+<article class="doc"><h3>🎓 3. College ID Card</h3><p>Valid Student, Faculty, or Institutional Identity Card.</p></article>
+</div></section>
+<section class="panel"><div class="eyebrow">📞 Official Registration Coordinators</div><h2>Contact Any of the Following Coordinators</h2><p class="contact">Registration will be completed through direct communication with the official coordinators listed below. Keep your Aadhaar Card, Government ID, and College ID ready when contacting them.</p>
+<div class="coordinators">
+<article class="coord"><h3>Amit Ku. Mandal</h3><div class="role">Registration Coordinator · 01</div><div class="phone"><span>Phone Number:</span><a href="tel:+917008147344">+91 7008147344</a></div><div class="coord-actions"><a class="btn" href="tel:+917008147344">📞 Call Now</a><a class="btn wa" href="https://wa.me/917008147344" target="_blank" rel="noopener">WhatsApp</a></div></article>
+<article class="coord"><h3>Swapnant Mahanta</h3><div class="role">Registration Coordinator · 02</div><div class="phone"><span>Phone Number:</span><a href="tel:+917894583561">+91 7894583561</a></div><div class="coord-actions"><a class="btn" href="tel:+917894583561">📞 Call Now</a><a class="btn wa" href="https://wa.me/917894583561" target="_blank" rel="noopener">WhatsApp</a></div></article>
+<article class="coord"><h3>Pritish Kumar Dharua</h3><div class="role">Registration Coordinator · 03</div><div class="phone"><span>Phone Number:</span><a href="tel:+917077784114">+91 7077784114</a></div><div class="coord-actions"><a class="btn" href="tel:+917077784114">📞 Call Now</a><a class="btn wa" href="https://wa.me/917077784114" target="_blank" rel="noopener">WhatsApp</a></div></article>
+</div>
+<div class="instructions"><strong>✦ Important Registration Instructions:</strong><ul><li>Registration is strictly offline through the 3 coordinators above.</li><li>Fee Structure: ₹1,000 for Students of any college | ₹2,000 for Doctors, HMOs, Faculty, Researchers, and Alumni.</li><li>Please keep your Aadhaar Card, Any Government ID, and College ID ready during communication.</li><li>Register early because seats are strictly limited. Registration may close before the deadline once all seats are filled.</li><li>No online registration form and no spot registration will be available.</li></ul></div></section>
+</main><footer><div class="inner"><div><strong>homoeoworld</strong><p>National Scientific Convention on Homoeopathy 2026 · Bhubaneswar, Odisha</p></div><div><strong>Official Secretariat</strong><p>Achmchcultural2022@gmail.com · +91 7749092865</p></div><div style="margin-top:12px;padding:13px 15px;border:1px solid #d5b85a;border-radius:12px;background:rgba(213,184,90,.12);">
+<strong style="display:block;font-size:16px;letter-spacing:.6px;color:#e8c96e;">WEBSITE DESIGNED BY UJJWAL KUMAR 1ST BHMS</strong>
+<span style="display:block;margin-top:8px;">Contact: <a href="tel:9709378085">9709378085</a></span>
+<span style="display:block;margin-top:6px;">Instagram: <a href="https://www.instagram.com/medic.ujjwal?hvrq=dmUycnF6emJvdjM1" target="_blank" rel="noopener noreferrer">@medic.ujjwal</a></span>
+</div></div></footer>
+<script>(function(){const deadline=new Date('2026-11-23T23:59:00+05:30').getTime();if(Date.now()>=deadline){document.querySelectorAll('.coord-actions a').forEach(a=>{a.removeAttribute('href');a.setAttribute('aria-disabled','true');a.style.opacity='.5';a.style.pointerEvents='none'});const n=document.querySelector('.notice');if(n)n.innerHTML='<strong>REGISTRATION CLOSED.</strong> The registration deadline of 23 November 2026 at 11:59 PM (IST) has passed. No registration or spot registration is available.';}})();</script>
+</body></html>

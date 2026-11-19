@@ -83,6 +83,11 @@
 .deadline-countdown{display:flex;gap:9px;flex-wrap:wrap}.deadline-countdown div{min-width:68px;padding:11px 10px;border:1px solid #ffffff50;border-radius:12px;text-align:center;background:#ffffff12}.deadline-countdown strong{display:block;font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}.deadline-countdown span{display:block;margin-top:5px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#e3eee7}
 .deadline-closed{flex-basis:100%;font-weight:900!important;color:#ffe2a8!important;font-size:18px!important}
 @media(max-width:600px){.registration-deadline{margin:14px 12px;padding:20px}.deadline-countdown{width:100%;justify-content:space-between}.deadline-countdown div{flex:1;min-width:58px;padding:10px 5px}.deadline-countdown strong{font-size:22px}}
+
+.deadline-contact-wrap{flex-basis:100%;display:flex;justify-content:center;margin-top:2px}
+.deadline-contact-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 24px;border-radius:999px;background:linear-gradient(135deg,#f3d58c,#d6ad50);color:#173b2d!important;font-weight:900;font-size:14px;letter-spacing:.5px;text-decoration:none;box-shadow:0 7px 20px rgba(0,0,0,.18);border:1px solid #ffe7ad;transition:transform .2s,box-shadow .2s}
+.deadline-contact-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.24)}
+@media(max-width:600px){.deadline-contact-btn{width:100%;text-align:center;padding:14px 16px;font-size:13px}}
 </style></head><body>
 <div class="topbar"><span>Academic Exchange · Research · Innovation</span><span>Bhubaneswar, Odisha, India · 2026</span></div>
 <header><a class="brand" href="index.html"><span class="logo">✳</span><span>homoeoworld</span></a><button class="menu" id="menuBtn" aria-label="Toggle menu">☰</button><nav id="nav"><a href="#convention">The Convention</a><a href="#delegate">Delegate Registration</a><a href="delegation-fee.html">Delegation Fee</a><a href="#about-institution">About the Institution</a><a class="btn offline-reg-link" href="registration.html">Offline Registration</a></nav></header>
@@ -101,6 +106,9 @@
     <div><strong id="cdSeconds">--</strong><span>Seconds</span></div>
   </div>
   <p class="deadline-closed" id="deadlineClosed" hidden>REGISTRATION CLOSED — No spot registration will be available.</p>
+  <div class="deadline-contact-wrap">
+    <a class="deadline-contact-btn" href="registration-contacts.html" target="_blank" rel="noopener">☎ CONTACT HERE FOR REGISTRATION</a>
+  </div>
 </section>
 
 <section class="top-carousel" aria-label="Homoeoworld image carousel">
